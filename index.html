@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" href="./_include/style.css">
+    <title>BSP TryOut</title>
+  </head>
+  <body style="">
+    <h1>Dungeon generation by BSP playground</h1>
+    <div class="stuff_container">
+        <div id="controls">
+            <ul>
+              <li>
+                <label>Map size</label>
+                <input name="mapsize" type="number" min="0">
+              </li>
+              <li>
+                <label>Iterations</label>
+                <input name="iterations" type="number" min="0">
+              </li>
+              <li>
+                <label>Discard container by ratio</label>
+                <input name="discard_ratio" type="checkbox">
+              </li>
+              <li>
+                <label>room vertical ratio &gt;</label>
+                <input name="h_ratio" type="number" min="0" step="0.01">
+              </li>
+              <li>
+                <label>room horizontal ratio &gt;</label>
+                <input name="w_ratio" type="number" min="0" step="0.01">
+              </li>
+              <li>
+                <label>Draw grid</label>
+                <input name="d_grid" type="checkbox">
+              </li>
+              <li>
+                <label>Draw BSPs</label>
+                <input name="d_bsp" type="checkbox">
+              </li>
+              <li>
+                <label>Draw rooms</label>
+                <input name="d_rooms" type="checkbox">
+              </li>
+              <li>
+                  <label>Draw corridors</label>
+                <input name="d_paths" type="checkbox">
+              </li>
+          </ul>
+        </div>
+        <div class="canvas_wrapper">
+        <canvas width="400" height="400" id="viewport"></canvas>
+      </div>
+    </div>
+    <form id="seeder">
+      <input id="seed" name="seed">
+      <button id="load">Load</button>
+      <button id="generate">Generate new seed, and Load</button>
+    </form>
+  <script src="./_include/jquery.js"></script>
+  <script src="./_include/seedrandom.js"></script>
+  <script src="./_include/md5.js"></script>
+  <script src="./_include/dungeon.js"></script>
+  <script src="./_include/main.js"></script>
+  </body>
+</html>
